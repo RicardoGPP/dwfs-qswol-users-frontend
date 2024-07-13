@@ -22,6 +22,7 @@ describe('Users CRUD', () => {
 
         cy.get('.column-name > .MuiTypography-root').contains(user.name);
         cy.get('.column-email > .MuiTypography-root').contains(user.email);
+        cy.get('.column-password > .MuiTypography-root').contains(user.password);
         cy.get('.MuiTablePagination-displayedRows').contains('1-1 of 1');
     });
 
@@ -41,6 +42,7 @@ describe('Users CRUD', () => {
         cy.contains('Element created');
         cy.get('.column-name > .MuiTypography-root').contains(user.name);
         cy.get('.column-email > .MuiTypography-root').contains(user.email);
+        cy.get('.column-password > .MuiTypography-root').contains(user.password);
     });
 
     it('Create, when fill form and press enter, then must create the user', () => {
@@ -58,6 +60,7 @@ describe('Users CRUD', () => {
         cy.contains('Element created');
         cy.get('.column-name > .MuiTypography-root').contains(user.name);
         cy.get('.column-email > .MuiTypography-root').contains(user.email);
+        cy.get('.column-password > .MuiTypography-root').contains(user.password);
     });
 
     it('Edit, when fill form and click save, then must edit the user', () => {
@@ -83,6 +86,7 @@ describe('Users CRUD', () => {
         cy.contains('Element updated');
         cy.get('.column-name > .MuiTypography-root').contains(user2.name);
         cy.get('.column-email > .MuiTypography-root').contains(user2.email);
+        cy.get('.column-password > .MuiTypography-root').contains(user2.password);
     });
 
     it('Edit, when click to undo, then must undo the edit of the user', () => {
@@ -108,6 +112,7 @@ describe('Users CRUD', () => {
         cy.get('.MuiSnackbarContent-action > .MuiButtonBase-root').click();
         cy.get('.column-name > .MuiTypography-root').contains(user1.name);
         cy.get('.column-email > .MuiTypography-root').contains(user1.email);
+        cy.get('.column-password > .MuiTypography-root').contains(user1.password);
     });
 
     it('Delete, when inspect user and click delete, then must delete the user', () => {
@@ -139,5 +144,6 @@ describe('Users CRUD', () => {
         cy.get('.MuiSnackbarContent-action > .MuiButtonBase-root').click();
         cy.get('.column-name > .MuiTypography-root').contains(user.name);
         cy.get('.column-email > .MuiTypography-root').contains(user.email);
+        cy.get('.column-password > .MuiTypography-root').contains(user.password);
     });
 });
