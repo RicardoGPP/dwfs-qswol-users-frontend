@@ -6,7 +6,6 @@ export const UserList = (data) => (
             <TextField source="id"/>
             <TextField source="name"/>
             <EmailField source="email"/>
-            <TextField source="password" type="password"/>
         </Datagrid>
     </List>
 );
